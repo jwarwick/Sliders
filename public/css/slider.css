@@ -1,0 +1,22 @@
+.container 
+{
+	background-color: red;
+	height: 70px;
+	position: relative;
+}
+
+.content
+{
+	background-color: blue;
+	position: absolute;
+	width: 200px;
+	height: 100%;
+}
+
+.slider
+{
+	background-color: green;
+	position: absolute;
+	width: 50px;
+	height: 100%;
+}
