@@ -1,8 +1,14 @@
+.clone_object
+{
+	display: none;
+}
+
 .container 
 {
 	background-color: red;
 	height: 70px;
 	position: relative;
+	margin-top: 0.25cm;
 }
 
 .content
@@ -19,4 +25,16 @@
 	position: absolute;
 	width: 50px;
 	height: 100%;
+	left: 150px;
+}
+
+#button_container
+{
+	height: 25px;
+}
+
+#add_button
+{
+	float: right;
+	padding-right: 1cm;
 }

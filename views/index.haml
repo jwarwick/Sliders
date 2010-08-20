@@ -21,9 +21,12 @@
 		#main
 			#left
 			#center
-				.container
-					.content
-					.slider
+				#button_container
+					%a#add_button{:href => '#'} Add Slider
+				#slider_container
+					.container.clone_object
+						.content
+						.slider
 			#right
 		#footer
 		
