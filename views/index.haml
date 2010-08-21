@@ -25,8 +25,17 @@
 					%a#add_button{:href => '#'} Add Slider
 				#slider_container
 					.container.clone_object
-						.content
-						.slider
+						%span.title_container
+							%span.title_display
+								%span.title_label Title
+								%a.title_edit_button.show_on_hover{:href => '#'} Edit
+							%span.title_edit
+								%input.title_edit_input{:type => 'text'}
+								%a.title_ok_button{:href => '#'} Ok
+								%a.title_cancel_button{:href => '#'} Cancel
+						.controls_container
+							.content
+							.slider
 			#right
 		#footer
 		

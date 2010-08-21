@@ -3,7 +3,17 @@
 	display: none;
 }
 
-.container 
+.title_edit
+{
+	display: none;
+}
+
+.show_on_hover
+{
+	display: none;
+}
+
+.controls_container 
 {
 	background-color: red;
 	height: 70px;
