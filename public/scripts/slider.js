@@ -40,8 +40,8 @@ $(document).ready(function() {
 		})
 
 	$(".title_edit_button").click(editTitle)
-	$(".title_ok_button").click(updateTitle)
-	$(".title_cancel_button").click(displayTitle)
+	$(".title_ok_button").click(okTitle)
+	$(".title_cancel_button").click(cancelTitle)
 		
 		
 	$("#add_button").click(addNewSlider)
@@ -60,18 +60,19 @@ function updateContent(contentSel, sliderSel, final)
 
 function editTitle()
 {
-	var title = $(this).prev().text()
+	var title = $(this).prev().text()	
+	$(this).parent().parent().find('.title_edit_input').val(title)
 	$(this).parent().hide().next().show();
 }
 
-function updateTitle()
+function okTitle()
 {
-	// XXX - apparently $(this) gets screwed up (set to DomWindow)
-	// when we call displayTitle here...
-	displayTitle()
+	var value = $(this).prev().val()
+	$(this).parent().parent().find('.title_label').text(value)
+	$(this).parent().hide().prev().show();
 }
 
-function displayTitle()
+function cancelTitle()
 {
 	$(this).parent().hide().prev().show();
 }
