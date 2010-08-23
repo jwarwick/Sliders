@@ -10,7 +10,8 @@
 
 .title_label
 {
-	font-size: 1.2em;
+	font-size: 120%;
+	font-weight: bold;
 }
 
 .show_on_hover
@@ -18,12 +19,27 @@
 	display: none;
 }
 
+.action_link
+{
+	font-variant: small-caps;
+	font-size: 90%;
+}
+
+.remove_slider
+{
+	float: right;
+}
+
+.container
+{
+	margin-top: 0.50cm;
+}
+
 .controls_container 
 {
 	background-color: red;
 	height: 70px;
 	position: relative;
-	margin-top: 0.25cm;
 }
 
 .content

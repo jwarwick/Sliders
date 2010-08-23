@@ -1,21 +1,6 @@
 $(document).ready(function() {
 	
-	/*
-	var contentWidth = $(".slider").prev().width()
-	var sliderWidth = $(".slider").width()
-	$(".slider").css('left', contentWidth-sliderWidth)
-	*/
-	
 	$(".slider").hide()
-	
-	/*
-	$(".slider")
-		.draggable({
-			containment: 'parent',
-			drag: function(){updateContent($(this).prev(), $(this), false)},
-			stop: function(){updateContent($(this).prev(), $(this), true)},
-	})
-	*/
 	
 	$(".controls_container").hover(
 		function() 
@@ -42,7 +27,7 @@ $(document).ready(function() {
 	$(".title_edit_button").click(editTitle)
 	$(".title_ok_button").click(okTitle)
 	$(".title_cancel_button").click(cancelTitle)
-		
+	$(".remove_button").click(removeSlider)
 		
 	$("#add_button").click(addNewSlider)
 })
@@ -91,4 +76,9 @@ function addNewSlider()
 				drag: function(){updateContent($(this).prev(), $(this), false)},
 				stop: function(){updateContent($(this).prev(), $(this), true)},
 			})
+}
+
+function removeSlider()
+{
+	$(this).parent().parent().parent().fadeOut(500, function() {$(this).remove()})
 }

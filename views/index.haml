@@ -28,11 +28,13 @@
 						%span.title_container
 							%span.title_display
 								%span.title_label Title
-								%a.title_edit_button.show_on_hover{:href => '#'} Edit
+								%a.title_edit_button.show_on_hover.action_link{:href => '#'} Edit
 							%span.title_edit
 								%input.title_edit_input{:type => 'text'}
-								%a.title_ok_button{:href => '#'} Ok
-								%a.title_cancel_button{:href => '#'} Cancel
+								%a.title_ok_button.action_link{:href => '#'} Ok
+								%a.title_cancel_button.action_link{:href => '#'} Cancel
+							%span.remove_slider
+								%a.remove_button.action_link.show_on_hover{:href => '#'} Delete
 						.controls_container
 							.content
 							.slider
