@@ -6,12 +6,10 @@ $(document).ready(function() {
 		function() 
 		{
 			$(this).find(".slider").fadeIn(200);
-			//$(this).css('background-color', 'black')
 		},
 		function()
 		{
 			$(this).find(".slider").fadeOut(200);
-			//$(this).css('background-color', 'red')
 		})
 	
 	$(".container").hover(
@@ -24,9 +22,9 @@ $(document).ready(function() {
 			$(this).find(".show_on_hover").fadeOut(200);
 		})
 
-	$(".title_edit_button").click(editTitle)
-	$(".title_ok_button").click(okTitle)
-	$(".title_cancel_button").click(cancelTitle)
+	$(".edit_button").click(editTitle)
+	$(".ok_button").click(okTitle)
+	$(".cancel_button").click(cancelTitle)
 	$(".remove_button").click(removeSlider)
 		
 	$("#add_button").click(addNewSlider)
@@ -46,14 +44,14 @@ function updateContent(contentSel, sliderSel, final)
 function editTitle()
 {
 	var title = $(this).prev().text()	
-	$(this).parent().parent().find('.title_edit_input').val(title)
+	$(this).parent().parent().find('.edit_field').val(title)
 	$(this).parent().hide().next().show();
 }
 
 function okTitle()
 {
 	var value = $(this).prev().val()
-	$(this).parent().parent().find('.title_label').text(value)
+	$(this).parent().parent().find('.display_field').text(value)
 	$(this).parent().hide().prev().show();
 }
 

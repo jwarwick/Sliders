@@ -3,15 +3,26 @@
 	display: none;
 }
 
-.title_edit
+.title_edit, .description_edit
 {
 	display: none;
+}
+
+.display_field, .edit_field
+{
+	margin-right: 10px;
 }
 
 .title_label
 {
 	font-size: 120%;
 	font-weight: bold;
+}
+
+.description_label
+{
+	font-style: italic;
+	color: #424242;
 }
 
 .show_on_hover

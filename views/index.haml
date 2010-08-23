@@ -25,16 +25,24 @@
 					%a#add_button{:href => '#'} Add Slider
 				#slider_container
 					.container.clone_object
-						%span.title_container
+						.title_container
 							%span.title_display
-								%span.title_label Title
-								%a.title_edit_button.show_on_hover.action_link{:href => '#'} Edit
+								%span.title_label.display_field Title
+								%a.edit_button.show_on_hover.action_link{:href => '#'} Edit
 							%span.title_edit
-								%input.title_edit_input{:type => 'text'}
-								%a.title_ok_button.action_link{:href => '#'} Ok
-								%a.title_cancel_button.action_link{:href => '#'} Cancel
+								%input.title_edit_input.edit_field{:type => 'text'}
+								%a.ok_button.action_link{:href => '#'} Ok
+								%a.cancel_button.action_link{:href => '#'} Cancel
 							%span.remove_slider
 								%a.remove_button.action_link.show_on_hover{:href => '#'} Delete
+						.description_container
+							%span.description_display
+								%span.description_label.display_field Description
+								%a.edit_button.show_on_hover.action_link{:href => '#'} Edit
+							%span.description_edit
+								%input.description_edit_input.edit_field{:type => 'text'}
+								%a.ok_button.action_link{:href => '#'} Ok
+								%a.cancel_button.action_link{:href => '#'} Cancel
 						.controls_container
 							.content
 							.slider
