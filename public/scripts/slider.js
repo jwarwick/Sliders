@@ -25,18 +25,10 @@ $(document).ready(function()
 			$(this).find(".show_on_hover").fadeOut(200);
 		})
 
-		// XXX - mouseup and mousedown don't work because
-		// mouseup won't fire if you move the mouse off of the link
-		// mouseenter/leave don't work if you move too fast and leave the link
-	$(".drag_button")
-		.mouseenter(function() 
-			{
-				$(this).parent().parent().parent().draggable({containment: 'parent'})
-			})
-		.mouseleave(function() 
-			{
-				$(this).parent().parent().parent().draggable('destroy')
-			})
+		$("#slider_container").sortable({axis: 'y', 
+										// containment: 'parent',
+										opacity: 0.6,
+										distance: 30});
 		
 	$(".edit_button").click(editTitle)
 	$(".ok_button").click(okTitle)
