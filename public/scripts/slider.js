@@ -1,7 +1,10 @@
-$(document).ready(function() {
-	
-	$(".slider").hide()
-	
+$(document).ready(function() 
+{
+
+	// if we want to make a leading div with the drag indicator, we need
+	// to do some fancy jquery to get the sizes right
+	// http://www.filamentgroup.com/lab/setting_equal_heights_with_jquery/
+		
 	$(".controls_container").hover(
 		function() 
 		{
@@ -22,6 +25,19 @@ $(document).ready(function() {
 			$(this).find(".show_on_hover").fadeOut(200);
 		})
 
+		// XXX - mouseup and mousedown don't work because
+		// mouseup won't fire if you move the mouse off of the link
+		// mouseenter/leave don't work if you move too fast and leave the link
+	$(".drag_button")
+		.mouseenter(function() 
+			{
+				$(this).parent().parent().parent().draggable({containment: 'parent'})
+			})
+		.mouseleave(function() 
+			{
+				$(this).parent().parent().parent().draggable('destroy')
+			})
+		
 	$(".edit_button").click(editTitle)
 	$(".ok_button").click(okTitle)
 	$(".cancel_button").click(cancelTitle)
