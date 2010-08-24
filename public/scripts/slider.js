@@ -26,10 +26,23 @@ $(document).ready(function()
 		})
 
 		$("#slider_container").sortable({axis: 'y', 
-										// containment: 'parent',
+										// containment: 'parent', // isn't allowing us to drop on top location
 										opacity: 0.6,
 										distance: 30});
 		
+		
+	// handle enter key in edit fields
+	$(".input_field").keypress(function(e)
+	{
+		var k = e.keyCode || e.which;
+		if (k == 13) 
+		{
+			$(this).next().click();
+			e.preventDefault();
+			return false;
+     	}
+	});
+
 	$(".edit_button").click(editTitle)
 	$(".ok_button").click(okTitle)
 	$(".cancel_button").click(cancelTitle)
